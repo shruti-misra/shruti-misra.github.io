@@ -1,3 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/fa62c117c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Shruti Misra</title>
+  </head>
+  <body class="light" id="top">
+    <header class="header center">
+      <h3>
+        <a href="https://shruti-misra.github.io/#top" class="link"
+          >SM.</a
+        >
+      </h3>
+
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#projects">Projects</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#skills">Skills</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#contact">Contact</a>
+          </li>
+        </ul>
+
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+
+        <button
+          type="button"
+          aria-label="toggle navigation"
+          class="btn btn--icon nav__hamburger"
+        >
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+<div markdown="1">
+      
 # Problem
 
 Microsoft's cloud-based platform for real-time AI serving, Brainwave, uses high-performance field-programmable gate arrays (FPGAs) to accelerate inferencing. Project Brainwave inferencing for services such as Bing and Azure. For this internship, my team, which served Bing wanted to know whether inferencing could be further accelerated by supporting sparse computations in Brainwave's BERT framework. To address this, I performed the following tasks:
@@ -57,3 +114,30 @@ This project offered several valuable learnings:
 - Modifying existing firmware to integrate a new model can be challenging but also rewarding and enjoyable.
 - There may be a tradeoff between the robustness offered by sparse patterns and computational performance, which needs to be carefully considered when designing and implementing sparse transformers.
 - The end-to-end process of breaking down a new model and porting it to hardware can be complex and challenging, but it provides a valuable engineering lesson on how to optimize performance and improve the efficiency of deep learning models on hardware platforms.
+</div>
+
+      <!-- Contact -->
+      <section class="section contact center" id="contact">
+        <h2 class="section__title">Contact</h2>
+        <a href="mailto:smisra.1495@gmail.com">
+          <span class="btn btn--outline">Email me</span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer">
+    </footer>
+
+    <div class="scroll-container">
+    <div class="scroll-top">
+      <a aria-label="Scroll up" href="#top">
+        <i aria-hidden="true" class="fas fa-arrow-up"></i>
+      </a>
+    </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+
