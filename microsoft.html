@@ -18,13 +18,46 @@
     <title>Shruti Misra</title>
   </head>
 <body class="light" id="top">
+       <header class="header center">
+      <h3>
+        <a href="https://shruti-misra.github.io/#top" class="link"
+          >SM.</a
+        >
+      </h3>
+
+      <nav class="nav center">
+         <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="https://shruti-misra.github.io/#projects">Projects</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="https://shruti-misra.github.io/#skills">Skills</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="https://shruti-misra.github.io/#contact">Contact</a>
+          </li>
+        </ul>
+
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+
+        <button
+          type="button"
+          aria-label="toggle navigation"
+          class="btn btn--icon nav__hamburger"
+        >
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
       
 <section class="section problem" id="problem">
 <h2 class="section__title">Problem</h2>
 <p class="content">
 Microsoft's cloud-based platform for real-time AI serving, Brainwave, uses high-performance field-programmable gate arrays (FPGAs) to accelerate inferencing. Project Brainwave inferencing for services such as Bing and Azure. For this internship, my team, which served Bing wanted to know whether inferencing could be further accelerated by supporting sparse computations in Brainwave's BERT framework. To address this, I performed the following tasks:
 
-<ul>
+<ul class="content">
 <li>Analyzed the feasibility of supporting sparse computations within the Self Attention function of Brainwave's BERT framework.</li>
 <li>Designed, implement/modify, and test firmware to support sparse computations in BERT, ensuring seamless integration with the existing framework.</li>
 <li>Identified and suggest ways to extend the architecture to better support sparsity, thus improving the overall performance of the framework.</li>
@@ -58,7 +91,7 @@ The full transformer has limitations, particularly in terms of its memory and co
 Brainwave performs computation in the form of tiles consisting of matrices of input. My approach was to modify the tile engine such that it performs computation only on the tiles that have values in it.
 
 <h3 class="section__title">Objectives</h3>
-<ul>
+<ul class="content">
 <li>Develop a method for computing only the tiles comprising the lower triangular half of the attention score matrix, thus reducing computational requirements.</li>
 <li>Implement this method for any given arbitrary sparse pattern, regardless of sequence length.</li>
 <li>Analyze the impact of different sparse patterns and their parameters (such as sequence length and window size) on the performance of the model.</li>
@@ -67,7 +100,7 @@ Brainwave performs computation in the form of tiles consisting of matrices of in
 <h3 class="section__title">Results</h3>
    
 The results of this project demonstrate:
-<ul>
+<ul class="content">
 <li>A significant decrease in latency when adding support for sparse computations to the attention mechanism. This decrease in latency is found to scale with sequence length and sparsity, indicating the potential for even greater improvements with larger and sparser datasets.</li>
 <li>Some anomalous behavior and overhead within the context computation needed further investigation to ensure optimal performance.</li>
 <li>Packing dense tiles together has been identified as a means of saving VRF space, providing additional benefits in terms of resource utilization.</li>
@@ -77,7 +110,7 @@ Overall, these results offer promising insights into the potential of sparse com
 <h3 class="section__title">Challenges</h3>
 
 This project encountered several challenges related to supporting large sequence lengths in BERT:
-<ul>
+<ul class="content">
 <li>Limited memory in the BERT SKU makes it currently infeasible to support large sequence lengths.</li>
 <li>All testing was done in an emulator with unrealistic VRF sizes, which could impact the accuracy and performance of the model in real-world scenarios.</li>
 <li>The lack of a pre-trained model limited my ability to conduct a comprehensive analysis of the impact of increased sparsity on accuracy and model performance.</li>
@@ -87,7 +120,7 @@ Addressing these challenges will require further research and development, inclu
 <h3 class="section__title">Learnings</h3>
    
 This project offered several valuable learnings:
-<ul>
+<ul class="content">
 <li>Modifying existing firmware to integrate a new model can be challenging but also rewarding and enjoyable.</li>
 <li>There may be a tradeoff between the robustness offered by sparse patterns and computational performance, which needs to be carefully considered when designing and implementing sparse transformers.</li>
 <li>The end-to-end process of breaking down a new model and porting it to hardware can be complex and challenging, but it provides a valuable engineering lesson on how to optimize performance and improve the efficiency of deep learning models on hardware platforms.</li>
